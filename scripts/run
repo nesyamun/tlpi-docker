@@ -11,6 +11,6 @@ docker run \
   --tty \
   --cap-add=SYS_PTRACE \
   --security-opt seccomp=unconfined \
-  --volume "${PWD}/tlpi=/tlpi" \
+  --mount "type=bind,source=${PWD}/tlpi,target=/tlpi" \
   --name tlpi \
   tlpi
