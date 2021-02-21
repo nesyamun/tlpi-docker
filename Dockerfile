@@ -10,7 +10,3 @@ RUN apt-get update -y \
     make
 
 WORKDIR /tlpi
-
-COPY tlpi /tlpi
-
-RUN make
