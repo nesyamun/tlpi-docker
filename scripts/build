@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+cd "$(dirname "${0}")/.."
+
+if [ ! -d tlpi ]; then
+  echo "--> Cloning clone https://github.com/bradfa/tlpi-dist.git"
+  git clone https://github.com/bradfa/tlpi-dist.git tlpi
+fi
+
+echo "--> Building Docker image"
+docker build --tag tlpi .
